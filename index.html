@@ -29,8 +29,80 @@
             </div>
         </div>
 
+        <!-- ------------------------about ------------------------- -->
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/userJE.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p class="sub-title-p">I am a Full Stack Developer with a background in telecommunications
+                            engineering and hands-
+                            on experience in development projects. My expertise spans HTML, CSS, JavaScript, React.js,
+                            Next.js, Redux on the frontend, and Node.js, Express.js, PostgreSQL, MongoDB, Sequelize on
+                            the backend. Working within agile teams like Scrum, I've honed soft skills such as technical
+                            problem-solving and effective communication. I prioritize efficient delivery and
+                            collaborative
+                            development in demanding environments.🌐</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Full Stack Web Development</span><br>HTML, CSS, JavaScript, React.js,
+                                    Next.js, Redux, Node.js, Express.js, PostgreSQL, MongoDB, Sequelize</li>
+                                <li><span>Project Management</span><br>Planning and execution, Identification and
+                                    resolution</li>
+                                <li><span>Software</span><br>Microsoft Office (Intermediate), Power BI, Power Query</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>August 2023 - Current</span><br>Network Support Engineer | WAN Networks and
+                                    Telecommunications
+                                    Equipment Specialist</li>
+                                <li><span>March 2023 – May 2023</span><br>Rollout Manager </li>
+                                <li><span>September 2019 - December
+                                        2021</span><br>Telecommunications Project Coordinator</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Jul 2023 – Nov 2023</span><br>Full Stack Developer</li>
+                                <li><span>2012 - 2018</span><br>B.S in Telecommunications Engineer</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <script src="main.js"></script>
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents')
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove('active-link');
+            }
+
+            for (tabconten of tabcontents) {
+                tabconten.classList.remove('active-tab');
+            }
+
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabname).classList.add('active-tab')
+        }
+
+    </script>
 </body>
 
 </html>
